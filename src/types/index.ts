@@ -1,4 +1,4 @@
-type OrderStatus = 'started' | 'completed';
+export type OrderStatus = 'new' | 'started' | 'completed';
 
 export type OrderType = {
   dish: DishType;
@@ -9,6 +9,7 @@ export type OrderType = {
 export type RestarauntContextType = {
   orders: OrderType[];
   addOrder: (dish: DishType) => void;
+  updateOrder: (orderId: number, status: OrderStatus) => void;
 }
 
 export type IngredientType = {
@@ -21,7 +22,7 @@ export type FoodDishType = {
   title: string;
   description: string;
   price: number;
-  ingredients?: IngredientType[];
+  ingredients: IngredientType[];
 }
 
 export type DrinkDishType = {

@@ -5,4 +5,5 @@ import type { RestarauntContextType } from '../types';
 export const RestarauntContext = createContext<RestarauntContextType>({
   orders: [],
   addOrder: () => {},
+  updateOrder: () => {},
 });

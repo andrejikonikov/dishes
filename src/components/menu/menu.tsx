@@ -26,10 +26,10 @@ const dishes: DishType[] = [
     price: 15,
     ingredients: [
       { name: 'Bread', quantity: 1 },
-      { name: 'Fish', quantity: 1 },
+      { name: 'Fish', quantity: 2 },
       { name: 'Mayonnaise', quantity: 1 },
       { name: 'Lettuce', quantity: 1 },
-      { name: 'Tomato', quantity: 1 },
+      { name: 'Tomato', quantity: 3 },
       { name: 'Onion', quantity: 1 },
     ],
   } satisfies FoodDishType,
