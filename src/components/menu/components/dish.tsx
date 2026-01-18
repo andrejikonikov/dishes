@@ -1,7 +1,7 @@
 import { useContext } from 'react'
-import type { DishType } from '../menu'
 import Button from '../../shared/button'
 import { RestarauntContext } from '../../../contexts/RestarauntContext'
+import type { DishType } from '../../../types'
 
 type DishProps = {
   dish: DishType;

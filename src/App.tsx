@@ -5,8 +5,8 @@ import Menu from './components/menu/menu'
 import Chef from './components/chef/chef'
 
 import { RestarauntContext } from './contexts/RestarauntContext'
-import type { OrderType } from './contexts/RestarauntContext'
-import type { DishType } from './components/menu/menu'
+
+import type { OrderType, DishType } from './types'
 
 function App() {
   const [orders, setOrders] = useState<OrderType[]>([])

@@ -1,27 +1,7 @@
 import './menu.scss'
 import Dish from './components/dish'
 
-export type IngredientType = {
-  name: string;
-  quantity: number;
-}
-
-type FoodDishType = {
-  type: 'food';
-  title: string;
-  description: string;
-  price: number;
-  ingredients?: IngredientType[];
-}
-
-type DrinkDishType = {
-  type: 'drink';
-  title: string;
-  description: string;
-  price: number;
-}
-
-export type DishType = FoodDishType | DrinkDishType;
+import type { FoodDishType, DrinkDishType, DishType } from '../../types';
 
 const dishes: DishType[] = [
   {
