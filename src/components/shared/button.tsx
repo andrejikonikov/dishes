@@ -1,3 +1,4 @@
+import { memo } from 'react'
 
 type ButtonProps = {
   text: string
@@ -12,4 +13,4 @@ function Button({ text, onClick }: ButtonProps) {
   )
 }
 
-export default Button
+export default memo(Button)

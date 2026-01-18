@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useCallback } from 'react'
 import './App.css'
 
 import Menu from './components/menu/menu'
@@ -11,7 +11,7 @@ import type { OrderType, DishType } from './types'
 function App() {
   const [orders, setOrders] = useState<OrderType[]>([])
 
-  const addOrder = (dish: DishType) => {
+  const addOrder = useCallback((dish: DishType) => {
     setOrders((prev) => [...prev, { dish, id: Date.now() }])
 
     if (dish.type === 'drink') {
@@ -19,7 +19,7 @@ function App() {
     }
 
     console.log('Ordering dish', dish.ingredients)
-  }
+  }, [])
 
   return (
     <RestarauntContext value={{ orders, addOrder }}>

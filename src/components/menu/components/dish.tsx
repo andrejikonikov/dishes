@@ -1,14 +1,14 @@
-import { useContext } from 'react'
 import Button from '../../shared/button'
-import { RestarauntContext } from '../../../contexts/RestarauntContext'
 import type { DishType } from '../../../types'
+import { withAddOrder } from '../../../hocs/withAddOrder'
 
 type DishProps = {
   dish: DishType;
+  addOrder: (dish: DishType) => void;
 }
 
-function Dish({ dish }: DishProps) {
-  const { addOrder } = useContext(RestarauntContext)
+function Dish({ dish, addOrder }: DishProps) {
+  console.log('Dish rendered ', dish.title)
   const { title, description, price, type } = dish
 
   if (type === 'drink') {
@@ -32,4 +32,5 @@ function Dish({ dish }: DishProps) {
   )
 }
 
-export default Dish
+const DishWithAddOrder = withAddOrder(Dish)
+export default DishWithAddOrder

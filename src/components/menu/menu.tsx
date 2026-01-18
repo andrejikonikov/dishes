@@ -1,7 +1,8 @@
+import { memo } from 'react'
 import './menu.scss'
 import Dish from './components/dish'
 
-import type { FoodDishType, DrinkDishType, DishType } from '../../types';
+import type { FoodDishType, DrinkDishType, DishType } from '../../types'
 
 const dishes: DishType[] = [
   {
@@ -41,6 +42,7 @@ const dishes: DishType[] = [
 ] satisfies DishType[];
 
 function Menu() {
+  console.log('Menu rendered')
   return (
     <div className="menu">
       {dishes.map((dish) => (
@@ -50,4 +52,4 @@ function Menu() {
   )
 }
 
-export default Menu
+export default memo(Menu)
