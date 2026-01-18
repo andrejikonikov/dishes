@@ -8,8 +8,6 @@ function Chef() {
   const startedOrders = orders.filter(order => order.status === 'started')
 
   function startCooking(dish: DishType) {
-    console.log('Chef started cooking ', dish.type)
-
     const { type } = dish
 
     return new Promise<string>((resolve) => {
@@ -22,7 +20,6 @@ function Chef() {
         .reduce((acc, ingredient) => acc + ingredient.quantity * 1000, 0)
 
       setTimeout(() => {
-        console.log('Chef finished cooking ', dish.type, dish.ingredients)
         resolve('success')
       }, preparationTime)
     })
@@ -41,8 +38,6 @@ function Chef() {
 
   useEffect(() => {
     if (newOrders.length > 0) {
-      console.log('Chef useEffect ', newOrders)
-
       newOrders.forEach(order => {
         startPreparing(order)
       })
@@ -51,7 +46,7 @@ function Chef() {
 
   return (
     <div className="chef">
-      <h2>Chef</h2>
+      <h2>Chef 🧑‍🍳</h2>
       <p>New Orders: {newOrders.length}</p>
       <p>Started Orders: {startedOrders.length}</p>
     </div>
