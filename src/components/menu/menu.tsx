@@ -2,12 +2,17 @@ import { memo } from 'react'
 import './menu.scss'
 import Dish from './components/dish'
 
-import type { FoodDishType, DrinkDishType, DishType } from '../../types'
+import {
+  type FoodDishType,
+  type DrinkDishType,
+  type DishType,
+  DishesTitles,
+} from '../../types'
 
 const dishes: DishType[] = [
   {
     type: 'food',
-    title: 'Burger',
+    title: DishesTitles.Burger,
     description: 'Delicious burger',
     price: 10,
     ingredients: [
@@ -21,7 +26,7 @@ const dishes: DishType[] = [
   } satisfies FoodDishType,
   {
     type: 'food',
-    title: 'Fish',
+    title: DishesTitles.Fish,
     description: 'Fresh fish',
     price: 15,
     ingredients: [
@@ -35,7 +40,7 @@ const dishes: DishType[] = [
   } satisfies FoodDishType,
   {
     type: 'drink',
-    title: 'Drink',
+    title: DishesTitles.Drink,
     description: 'Refreshing drink',
     price: 0,
   } satisfies DrinkDishType,

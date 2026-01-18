@@ -19,7 +19,7 @@ export type IngredientType = {
 
 export type FoodDishType = {
   type: 'food';
-  title: string;
+  title: DishesTitles;
   description: string;
   price: number;
   ingredients: IngredientType[];
@@ -27,9 +27,17 @@ export type FoodDishType = {
 
 export type DrinkDishType = {
   type: 'drink';
-  title: string;
+  title: DishesTitles;
   description: string;
   price: number;
 }
 
 export type DishType = FoodDishType | DrinkDishType;
+
+export const DishesTitles = {
+  Burger: 'Burger',
+  Fish: 'Fish',
+  Drink: 'Drink',
+} as const
+
+export type DishesTitles = typeof DishesTitles[keyof typeof DishesTitles]
