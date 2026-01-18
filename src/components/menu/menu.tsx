@@ -44,7 +44,7 @@ const dishes: DishType[] = [
 function Menu() {
   return (
     <section className="card menu">
-      <h2 className="card__title">Menu</h2>
+      <h3 className="card__title">Menu</h3>
       {dishes.map((dish) => (
         <Dish key={dish.title} dish={dish} />
       ))}

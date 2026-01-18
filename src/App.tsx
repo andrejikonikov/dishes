@@ -3,6 +3,7 @@ import './App.css'
 
 import Menu from './components/menu/menu'
 import Chef from './components/chef/chef'
+import Table from './components/table/table'
 
 import { RestarauntContext } from './contexts/RestarauntContext'
 
@@ -32,6 +33,7 @@ function App() {
     <RestarauntContext value={{ orders, addOrder }}>
       <Chef />
       <Menu />
+      <Table />
     </RestarauntContext>
   )
 }
