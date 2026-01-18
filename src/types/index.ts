@@ -1,6 +1,9 @@
+type OrderStatus = 'started' | 'completed';
+
 export type OrderType = {
   dish: DishType;
   id: number;
+  status: OrderStatus;
 }
 
 export type RestarauntContextType = {

@@ -13,7 +13,13 @@ function App() {
   const [orders, setOrders] = useState<OrderType[]>([])
 
   const addOrder = useCallback((dish: DishType) => {
-    setOrders((prev) => [...prev, { dish, id: Date.now() }])
+    const newOrder = {
+      dish,
+      id: Date.now(),
+      status: 'started',
+    } as OrderType
+
+    setOrders((prev) => [...prev, newOrder])
 
     if (dish.type === 'drink') {
       return
