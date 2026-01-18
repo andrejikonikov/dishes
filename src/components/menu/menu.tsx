@@ -1,5 +1,6 @@
 import Fish from './components/fish'
 import Burger from './components/burger'
+import Drink from './components/drink'
 
 import './menu.scss'
 
@@ -8,6 +9,7 @@ function Menu() {
     <div className="menu">
       <Fish />
       <Burger />
+      <Drink />
     </div>
   )
 }
