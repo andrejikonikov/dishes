@@ -1,12 +1,16 @@
 .menu {
   border: 2px solid pink;
-  border-radius: 10px;
+  border-radius: 8px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  padding: 8px;
+  gap: 8px;
 
   &__dish {
-    padding: 10px;
+    padding: 8px;
+    border: 1px dashed orange;
+    border-radius: 4px;
   }
 }
