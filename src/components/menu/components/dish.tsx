@@ -1,6 +1,7 @@
 import Button from '../../shared/button'
 import type { DishType } from '../../../types'
 import { withAddOrder } from '../../../hocs/withAddOrder'
+import { getIcon } from '../../../utils/getDishIcon'
 
 type DishProps = {
   dish: DishType;
@@ -12,7 +13,7 @@ function Dish({ dish, addOrder }: DishProps) {
 
   return (
     <div className="menu__dish">
-      <h2>{title}</h2>
+      <h2>{title} {getIcon(title)}</h2>
       <p>{description}</p>
       <p>Price: ${price}</p>
       <Button text="Order" onClick={() => addOrder(dish)} />
