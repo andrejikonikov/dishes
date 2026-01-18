@@ -7,6 +7,7 @@ import Chef from './components/chef/chef'
 import { RestarauntContext } from './contexts/RestarauntContext'
 
 import type { OrderType, DishType } from './types'
+import './card.scss'
 
 function App() {
   const [orders, setOrders] = useState<OrderType[]>([])

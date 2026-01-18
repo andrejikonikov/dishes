@@ -1,0 +1,17 @@
+.card {
+  position: relative;
+  border: 2px solid pink;
+  border-radius: 8px;
+
+  &__title {
+    position: absolute;
+    top: -32px;
+    left: 0;
+    height: 32px;
+    line-height: 32px;
+    background: pink;
+    margin: 0;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+}

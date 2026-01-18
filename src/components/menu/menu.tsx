@@ -42,13 +42,13 @@ const dishes: DishType[] = [
 ] satisfies DishType[];
 
 function Menu() {
-  console.log('Menu rendered')
   return (
-    <div className="menu">
+    <section className="card menu">
+      <h2 className="card__title">Menu</h2>
       {dishes.map((dish) => (
         <Dish key={dish.title} dish={dish} />
       ))}
-    </div>
+    </section>
   )
 }
 
