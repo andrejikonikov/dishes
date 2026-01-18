@@ -1,15 +1,11 @@
-import Fish from './components/fish'
-import Burger from './components/burger'
-import Drink from './components/drink'
-
 import './menu.scss'
 
 function Menu() {
   return (
     <div className="menu">
-      <Fish />
-      <Burger />
-      <Drink />
+      {dishes.map((dish) => (
+        <Dish key={dish.title} dish={dish} />
+      ))}
     </div>
   )
 }
